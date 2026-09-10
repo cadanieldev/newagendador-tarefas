@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface UsuarioClient {
 
     //Apontar para a uri que vai trazer os dados do usuario
-    @GetMapping
+    @GetMapping("/usuario") // sempre apontar o URI no get
     // anotacao metodo get
     UsuarioDTO buscaUsuarioPorEmail(@RequestParam("email") String email,
                                     @RequestHeader("Authorization") String token);
